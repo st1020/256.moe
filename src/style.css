@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overscroll-behavior: none;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+button {
+  font: inherit;
+  cursor: crosshair;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+button:focus {
+  outline: none;
+}
+
+#universe {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+#field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#copyright {
+  position: fixed;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  color: #888;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+#copyright:hover,
+#copyright:focus-within {
+  opacity: 1;
+}
+#copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+#expression {
+  --size: 25;
+  position: relative;
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: min(calc(var(--size) * 1vw), calc(var(--size) * 13px), 42vh);
+  font-weight: 550;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+  will-change: transform, opacity, filter;
+}
+
+math {
+  font-family: 'STIX Two Math', 'Cambria Math', math;
+  font-size: min(1em, 28vh);
+  font-weight: 400;
+  letter-spacing: normal;
+}
+math:has(munderover) {
+  font-size: min(1em, 17vh);
+}
+.byte {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.17em;
+}
+.word {
+  font-size: 0.56em;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+.code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #copyright {
+    transition: none;
+  }
+  #expression {
+    will-change: auto;
+  }
+}
