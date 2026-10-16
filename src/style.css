@@ -1,6 +1,30 @@
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: block;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Commit Mono';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src: url('@fontsource/commit-mono/files/commit-mono-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'STIX Two Math';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src: url('@fontsource/stix-two-math/files/stix-two-math-latin-400-normal.woff2') format('woff2');
+}
+
 :root {
   color-scheme: dark;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Inter Variable', sans-serif;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
 }
@@ -97,7 +121,7 @@ button:focus {
 }
 
 math {
-  font-family: 'STIX Two Math', 'Cambria Math', math;
+  font-family: 'STIX Two Math', math;
   font-size: min(1em, 28vh);
   font-weight: 400;
   letter-spacing: normal;
@@ -116,7 +140,7 @@ math:has(munderover) {
   letter-spacing: -0.02em;
 }
 .code {
-  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-family: 'Commit Mono', monospace;
   font-weight: 400;
   letter-spacing: 0;
 }

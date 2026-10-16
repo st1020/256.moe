@@ -255,7 +255,7 @@ function carry(step: number): Point {
 
 const binary: Scene = {
   id: 'binary',
-  html: math('<msub><mn class="code">100000000</mn><mn>2</mn></msub>'),
+  html: math('<msub class="code"><mn>100000000</mn><mn>2</mn></msub>'),
   size: 10,
   label: 'Binary one followed by eight zeros equals decimal 256',
   target: (i, time) => carry(4.5 - 4.5 * Math.cos(i * goldenAngle + time * 0.28)),
